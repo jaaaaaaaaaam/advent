@@ -15,13 +15,14 @@ $input = '()()(()()()(()()((()((()))((()((((()()((((()))()((((())(((((((()((((((
 // What is the position of the character that causes Santa to first enter the basement?
 
 $floor = 0;
+
 $hitBasement = false;
 
 foreach (str_split($input) as $id => $direction) {
     $direction == '(' ? $floor++ : $floor--;
     if ($floor == -1 && $hitBasement == false) {
         $hitBasement = true;
-        $enteredBasement = $id;
+        $enteredBasement = $id + 1;
     }
 }
 
