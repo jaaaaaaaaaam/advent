@@ -1,0 +1,1 @@
+<?php $e=str_split(file_get_contents('i'));$f=0;$h=0;foreach($e as$i=>$d){$d=='('?$f++:$f--;$f==-1&&$h==0?$h=$i+1:null;}echo $f.' '.$h;
