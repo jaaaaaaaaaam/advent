@@ -16,15 +16,14 @@ $input = '()()(()()()(()()((()((()))((()((((()()((((()))()((((())(((((((()((((((
 
 $floor = 0;
 
-$hitBasement = false;
+$hitBasement = 0;
 
 foreach (str_split($input) as $id => $direction) {
     $direction == '(' ? $floor++ : $floor--;
-    if ($floor == -1 && $hitBasement == false) {
-        $hitBasement = true;
-        $enteredBasement = $id + 1;
+    if ($floor == -1 && $hitBasement == 0) {
+        $hitBasement = $id + 1;
     }
 }
 
 echo $floor.PHP_EOL;
-echo $enteredBasement.PHP_EOL;
+echo $hitBasement.PHP_EOL;
