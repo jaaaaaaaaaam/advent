@@ -1,1 +1,1 @@
-<?php $f=$b=0;foreach(str_split(file('i')[0])as$p=>$d){($f-=$d=='('?-1:1)>=0|$b?:$b=$p+1;}echo"$f $b";
+<?php $f=$b=0;foreach(str_split(file('i')[0])as$p=>$d)($f-=$d=='('?-1:1)>=0|$b?:$b=$p+1;echo"$f $b";
